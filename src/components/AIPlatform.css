@@ -235,3 +235,47 @@
 .status-ok {
   color: #00ff88;
 }
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .dashboard-sidebar {
+    padding: 1rem;
+  }
+  .sidebar-menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .sidebar-menu li {
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+  .widgets {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-page {
+    padding: 1.5rem;
+  }
+  .ai-platform {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 412px) {
+  .history-table th, .history-table td {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  .history-table-container {
+    overflow-x: auto;
+  }
+  .alert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

@@ -44,3 +44,18 @@
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  .tech-card {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+    word-wrap: break-word;
+  }
+}

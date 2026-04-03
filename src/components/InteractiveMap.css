@@ -111,3 +111,13 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
+
+@media (max-width: 768px) {
+  .map-view {
+    height: 400px;
+  }
+  .scan-circle {
+    width: 250px;
+    height: 250px;
+  }
+}

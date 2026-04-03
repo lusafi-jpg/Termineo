@@ -110,18 +110,18 @@ const Admin = ({ onBack }) => {
             ) : (
               requests.map((req) => (
                 <tr key={req.id}>
-                  <td>{req.date}</td>
-                  <td>{req.nom}</td>
-                  <td>{req.email}</td>
-                  <td>{req.entreprise}</td>
-                  <td>{req.secteur}</td>
-                  <td className="msg-cell" title={req.message}>{req.message || '-'}</td>
-                  <td>
+                  <td data-label="Date">{req.date}</td>
+                  <td data-label="Nom">{req.nom}</td>
+                  <td data-label="Email">{req.email}</td>
+                  <td data-label="Entreprise">{req.entreprise}</td>
+                  <td data-label="Secteur">{req.secteur}</td>
+                  <td data-label="Message" className="msg-cell" title={req.message}>{req.message || '-'}</td>
+                  <td data-label="Statut">
                     <span className={`status-badge ${req.status === 'Accordée' ? 'granted' : 'pending'}`}>
                       {req.status}
                     </span>
                   </td>
-                  <td className="actions-cell">
+                  <td data-label="Actions" className="actions-cell">
                     {req.status !== 'Accordée' && (
                       <button className="grant-btn" onClick={() => handleGrant(req.id)}>Accorder</button>
                     )}

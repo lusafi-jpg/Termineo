@@ -15,14 +15,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
-body {
+html, body {
   background-color: var(--bg-deep);
   color: var(--text-primary);
   font-family: var(--font-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -63,6 +66,35 @@ button {
   text-shadow: 0 0 10px var(--accent-orange-glow);
 }
 
+.primary {
+  background: var(--accent-orange);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.secondary {
+  border: 1px solid var(--accent-orange);
+  color: var(--accent-orange);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary:hover {
+  background: #e65c00;
+  box-shadow: 0 0 20px var(--accent-orange-glow);
+}
+
+.secondary:hover {
+  background: rgba(255, 102, 0, 0.1);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
@@ -74,7 +106,26 @@ button {
 }
 
 .section-container {
-  max-width: 1200px;
+  max-width: 100%;
+  width: 1200px;
   margin: 0 auto;
   padding: 80px 20px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 60px 15px;
+  }
+  h1 { font-size: 2.2rem !important; word-wrap: break-word; }
+  h2 { font-size: 1.6rem !important; word-wrap: break-word; }
+  h3 { font-size: 1.3rem !important; word-wrap: break-word; }
+}
+
+@media (max-width: 412px) {
+  .section-container {
+    padding: 30px 10px;
+  }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.5rem !important; }
 }

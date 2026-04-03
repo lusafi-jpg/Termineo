@@ -33,4 +33,14 @@
   .cta-title {
     font-size: 2rem;
   }
+  .cta-content {
+    padding: 3rem 1.5rem;
+  }
+  .cta-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .cta-actions button {
+    width: 100%;
+  }
 }
