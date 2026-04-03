@@ -1,0 +1,71 @@
+.tellu-rover {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 150px;
+}
+
+.rover-visual {
+  flex: 1;
+}
+
+.rover-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+}
+
+.rover-info {
+  flex: 1;
+}
+
+.rover-info .section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.rover-main-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.rover-features {
+  list-style: none;
+  margin-bottom: 3rem;
+}
+
+.rover-feature-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  color: var(--accent-orange);
+}
+
+.rover-feature-item strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.rover-feature-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .tellu-rover {
+    flex-direction: column;
+    text-align: center;
+  }
+  .rover-info .section-title {
+    text-align: center;
+  }
+  .rover-feature-item {
+    justify-content: center;
+  }
+}

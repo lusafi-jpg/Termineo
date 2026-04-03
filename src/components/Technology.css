@@ -1,0 +1,46 @@
+.technology {
+  padding-top: 120px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.tech-card {
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-orange);
+  box-shadow: 0 10px 30px rgba(255, 102, 0, 0.1);
+}
+
+.tech-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.tech-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-orange);
+}
+
+.tech-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

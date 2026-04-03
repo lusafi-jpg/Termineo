@@ -1,0 +1,168 @@
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.admin-login-card {
+  padding: 3rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.admin-login-card h2 {
+  margin-bottom: 2rem;
+  color: var(--primary-orange);
+  font-size: 1.8rem;
+}
+
+.admin-login-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.admin-login-buttons button {
+  flex: 1;
+}
+
+.error-text {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.admin-dashboard {
+  padding-top: 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  color: var(--primary-orange);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.requests-table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.requests-table th, 
+.requests-table td {
+  padding: 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.requests-table th {
+  color: var(--primary-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.msg-cell {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background: rgba(255, 165, 0, 0.2);
+  color: #ffa500;
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.status-badge.granted {
+  background: rgba(0, 255, 127, 0.2);
+  color: #00ff7f;
+  border: 1px solid rgba(0, 255, 127, 0.3);
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.grant-btn {
+  background: var(--primary-orange);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.grant-btn:hover {
+  background: var(--dark-orange);
+  box-shadow: 0 0 10px rgba(255, 123, 0, 0.4);
+}
+
+.delete-btn {
+  background: rgba(255, 77, 77, 0.1);
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem !important;
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

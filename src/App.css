@@ -1,0 +1,49 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+button.primary {
+  background-color: var(--accent-orange);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 14px var(--accent-orange-glow);
+}
+
+button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-orange-glow);
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--text-primary);
+}
+
+button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
