@@ -8,7 +8,7 @@ const Navbar = ({ onAdminClick }) => {
         <div className="logo text-glow">Termineo</div>
         <ul className="nav-menu">
           <li className="nav-item"><a href="#technology">Technologie</a></li>
-          <li className="nav-item"><a href="#termi-rover">Termi-Rover</a></li>
+          <li className="nav-item"><a href="#chenille-rover">Chenille rover</a></li>
           <li className="nav-item"><a href="#ia">IA & Données</a></li>
         </ul>
         <button className="cta-button secondary admin-btn" onClick={onAdminClick}>Admin</button>

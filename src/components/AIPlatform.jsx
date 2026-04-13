@@ -45,7 +45,7 @@ const AIPlatform = () => {
         return (
           <div className="dashboard-page glass reveal">
             <h3>Cartographie GPS Haute Précision</h3>
-            <p>Localisation en temps réel du Termi-Rover et des points de forage.</p>
+            <p>Localisation en temps réel du Chenille rover et des points de forage.</p>
             <div className="placeholder-map glass">
               <div className="gps-marker"></div>
               <p className="coord">Coords: 45.123, -12.456</p>

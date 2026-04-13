@@ -14,8 +14,8 @@ const Hero = () => {
           Termineo transforme la gestion des risques miniers en une puissance prédictive.
         </p>
         <div className="hero-actions">
-          <a href="#termi-rover">
-            <button className="primary glow-orange">Découvrir le Termi-Rover</button>
+          <a href="#chenille-rover">
+            <button className="primary glow-orange">Découvrir le Chenille rover</button>
           </a>
           <a href="#ia">
             <button className="secondary">Voir la plateforme IA</button>

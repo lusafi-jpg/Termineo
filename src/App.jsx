@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Technology from './components/Technology';
-import TermiRover from './components/TermiRover';
+import ChenilleRover from './components/ChenilleRover';
 import AIPlatform from './components/AIPlatform';
 import InteractiveMap from './components/InteractiveMap';
 import CTA from './components/CTA';
@@ -44,7 +44,7 @@ function App() {
           <main>
             <Hero />
             <Technology />
-            <TermiRover />
+            <ChenilleRover />
             <AIPlatform />
             <InteractiveMap />
             <CTA onDemoClick={() => setIsModalOpen(true)} />

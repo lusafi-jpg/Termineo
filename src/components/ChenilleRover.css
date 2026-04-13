@@ -1,4 +1,4 @@
-.termi-rover {
+.chenille-rover {
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -58,7 +58,7 @@
 }
 
 @media (max-width: 900px) {
-  .termi-rover {
+  .chenille-rover {
     flex-direction: column;
     text-align: center;
   }

@@ -1,8 +1,8 @@
 import React from 'react';
-import './TermiRover.css';
+import './ChenilleRover.css';
 import roverImg from '../assets/rover.png';
 
-const TermiRover = () => {
+const ChenilleRover = () => {
   const features = [
     { title: "Soil Scanning", desc: "Digital mapping of the underground strata." },
     { title: "Risk Detection", desc: "Automated alert for structural instability." },
@@ -10,12 +10,12 @@ const TermiRover = () => {
   ];
 
   return (
-    <section id="termi-rover" className="termi-rover section-container reveal">
+    <section id="chenille-rover" className="chenille-rover section-container reveal">
       <div className="rover-visual">
-        <img src={roverImg} alt="Termi-Rover" className="rover-image glow-orange" />
+        <img src={roverImg} alt="Chenille rover" className="rover-image glow-orange" />
       </div>
       <div className="rover-info">
-        <h2 className="section-title text-glow">Le Termi-Rover</h2>
+        <h2 className="section-title text-glow">Le Chenille rover</h2>
         <p className="rover-main-desc">
           Un rover autonome conçu pour les environnements hostiles, capable de scanner
           le sol avec une précision millimétrique.
@@ -37,4 +37,4 @@ const TermiRover = () => {
   );
 };
 
-export default TermiRover;
+export default ChenilleRover;
