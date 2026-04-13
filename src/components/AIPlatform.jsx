@@ -30,8 +30,8 @@ const AIPlatform = () => {
                 <div className="scan-line"></div>
                 <div className="data-points">
                   {[...Array(15)].map((_, i) => (
-                    <div key={i} className="dot" style={{ 
-                      left: `${Math.random() * 90}%`, 
+                    <div key={i} className="dot" style={{
+                      left: `${Math.random() * 90}%`,
                       top: `${Math.random() * 80}%`,
                       animationDelay: `${Math.random() * 2}s`
                     }}></div>
@@ -45,7 +45,7 @@ const AIPlatform = () => {
         return (
           <div className="dashboard-page glass reveal">
             <h3>Cartographie GPS Haute Précision</h3>
-            <p>Localisation en temps réel du Tellu-Rover et des points de forage.</p>
+            <p>Localisation en temps réel du Termi-Rover et des points de forage.</p>
             <div className="placeholder-map glass">
               <div className="gps-marker"></div>
               <p className="coord">Coords: 45.123, -12.456</p>
@@ -130,13 +130,13 @@ const AIPlatform = () => {
 
   return (
     <section id="ia" className="ai-platform section-container">
-      <h2 className="section-title text-glow">Plateforme IA Telluseo</h2>
+      <h2 className="section-title text-glow">Plateforme IA Termineo</h2>
       <div className="dashboard-grid">
         <div className="dashboard-sidebar glass">
           <ul className="sidebar-menu">
             {menuItems.map((item) => (
-              <li 
-                key={item} 
+              <li
+                key={item}
                 className={activeTab === item ? 'active' : ''}
                 onClick={() => setActiveTab(item)}
               >

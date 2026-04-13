@@ -1,23 +1,23 @@
 import React from 'react';
-import './TelluRover.css';
+import './TermiRover.css';
 import roverImg from '../assets/rover.png';
 
-const TelluRover = () => {
+const TermiRover = () => {
   const features = [
     { title: "Soil Scanning", desc: "Digital mapping of the underground strata." },
     { title: "Risk Detection", desc: "Automated alert for structural instability." },
-    { title: "Real-time Data", desc: "Live integration with the TELLU cloud." }
+    { title: "Real-time Data", desc: "Live integration with the Termineo Cloud." }
   ];
 
   return (
-    <section id="tellu-rover" className="tellu-rover section-container reveal">
+    <section id="termi-rover" className="termi-rover section-container reveal">
       <div className="rover-visual">
-        <img src={roverImg} alt="Tellu-Rover" className="rover-image glow-orange" />
+        <img src={roverImg} alt="Termi-Rover" className="rover-image glow-orange" />
       </div>
       <div className="rover-info">
-        <h2 className="section-title text-glow">Le Tellu-Rover</h2>
+        <h2 className="section-title text-glow">Le Termi-Rover</h2>
         <p className="rover-main-desc">
-          Un rover autonome conçu pour les environnements hostiles, capable de scanner 
+          Un rover autonome conçu pour les environnements hostiles, capable de scanner
           le sol avec une précision millimétrique.
         </p>
         <ul className="rover-features">
@@ -37,4 +37,4 @@ const TelluRover = () => {
   );
 };
 
-export default TelluRover;
+export default TermiRover;

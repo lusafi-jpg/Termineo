@@ -1,4 +1,4 @@
-.tellu-rover {
+.termi-rover {
   display: flex;
   align-items: center;
   gap: 4rem;
@@ -58,13 +58,15 @@
 }
 
 @media (max-width: 900px) {
-  .tellu-rover {
+  .termi-rover {
     flex-direction: column;
     text-align: center;
   }
+
   .rover-info .section-title {
     text-align: center;
   }
+
   .rover-feature-item {
     justify-content: center;
   }

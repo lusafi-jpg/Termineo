@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Technology from './components/Technology';
-import TelluRover from './components/TelluRover';
+import TermiRover from './components/TermiRover';
 import AIPlatform from './components/AIPlatform';
 import InteractiveMap from './components/InteractiveMap';
 import CTA from './components/CTA';
@@ -44,7 +44,7 @@ function App() {
           <main>
             <Hero />
             <Technology />
-            <TelluRover />
+            <TermiRover />
             <AIPlatform />
             <InteractiveMap />
             <CTA onDemoClick={() => setIsModalOpen(true)} />
@@ -52,7 +52,7 @@ function App() {
           <DemoModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           <footer>
             <div className="section-container">
-              <p>&copy; 2026 TELLUSEO. Conçu pour l'avenir de l'industrie minière.</p>
+              <p>&copy; 2026 Termineo. Conçu pour l'avenir de l'industrie minière.</p>
             </div>
           </footer>
         </>

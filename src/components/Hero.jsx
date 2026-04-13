@@ -10,12 +10,12 @@ const Hero = () => {
       <div className="section-container hero-content reveal">
         <h1 className="hero-title">Sécurisez l’invisible.<br />Anticipez l’avenir.</h1>
         <p className="hero-subtitle">
-          Fusionnant la robotique autonome, la tomographie électrique et l’IA, 
-          Telluseo transforme la gestion des risques miniers en une puissance prédictive.
+          Fusionnant la robotique autonome, la tomographie électrique et l’IA,
+          Termineo transforme la gestion des risques miniers en une puissance prédictive.
         </p>
         <div className="hero-actions">
-          <a href="#tellu-rover">
-            <button className="primary glow-orange">Découvrir le Tellu-Rover</button>
+          <a href="#termi-rover">
+            <button className="primary glow-orange">Découvrir le Termi-Rover</button>
           </a>
           <a href="#ia">
             <button className="secondary">Voir la plateforme IA</button>
