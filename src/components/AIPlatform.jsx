@@ -3,11 +3,21 @@ import './AIPlatform.css';
 
 const AIPlatform = () => {
   const [activeTab, setActiveTab] = useState('Tableau de Bord');
+  const [alertLevel, setAlertLevel] = useState('FAIBLE'); // FAIBLE, MOYEN, CRITIQUE
+
+  const getAlertColor = (level) => {
+    switch (level) {
+      case 'FAIBLE': return '#00ff88';
+      case 'MOYEN': return '#ffaa00';
+      case 'CRITIQUE': return '#ff4444';
+      default: return 'var(--accent-orange)';
+    }
+  };
 
   const widgets = [
-    { title: "Statut Système", value: "OPÉRATIONNEL", sub: "98% efficacité" },
-    { title: "Points Critiques", value: "14", sub: "Détectés ces 24h" },
-    { title: "Niveau de Risque", value: "FAIBLE", color: "#00ff88" }
+    { title: "Statut Système", value: alertLevel === 'CRITIQUE' ? "ALERTE" : "OPÉRATIONNEL", sub: alertLevel === 'CRITIQUE' ? "Vérification requise" : "98% efficacité" },
+    { title: "Points Critiques", value: alertLevel === 'CRITIQUE' ? "42" : (alertLevel === 'MOYEN' ? "24" : "14"), sub: "Détectés ces 24h" },
+    { title: "Niveau de Risque", value: alertLevel, color: getAlertColor(alertLevel) }
   ];
 
   const renderContent = () => {
@@ -129,8 +139,27 @@ const AIPlatform = () => {
   ];
 
   return (
-    <section id="ia" className="ai-platform section-container">
-      <h2 className="section-title text-glow">Plateforme IA Termineo</h2>
+    <section id="ia" className={`ai-platform section-container ${alertLevel.toLowerCase()}`}>
+      <div className="section-header">
+        <h2 className="section-title text-glow">Plateforme IA Termineo</h2>
+        <div className="alert-selector glass">
+          <span className="selector-label">Niveau d'Alerte:</span>
+          <div className="alert-buttons">
+            <button
+              className={`alert-btn low ${alertLevel === 'FAIBLE' ? 'active' : ''}`}
+              onClick={() => setAlertLevel('FAIBLE')}
+            >Vert</button>
+            <button
+              className={`alert-btn medium ${alertLevel === 'MOYEN' ? 'active' : ''}`}
+              onClick={() => setAlertLevel('MOYEN')}
+            >Orange</button>
+            <button
+              className={`alert-btn high ${alertLevel === 'CRITIQUE' ? 'active' : ''}`}
+              onClick={() => setAlertLevel('CRITIQUE')}
+            >Rouge</button>
+          </div>
+        </div>
+      </div>
       <div className="dashboard-grid">
         <div className="dashboard-sidebar glass">
           <ul className="sidebar-menu">

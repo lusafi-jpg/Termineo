@@ -3,6 +3,7 @@ import './DemoModal.css';
 
 const DemoModal = ({ isOpen, onClose }) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [urgency, setUrgency] = useState('FAIBLE');
 
   if (!isOpen) return null;
 
@@ -15,6 +16,7 @@ const DemoModal = ({ isOpen, onClose }) => {
       email: formData.get('email'),
       entreprise: formData.get('entreprise'),
       secteur: formData.get('secteur'),
+      urgence: formData.get('urgence'),
       message: formData.get('message'),
       status: 'En attente',
       date: new Date().toLocaleString('fr-FR')
@@ -62,6 +64,26 @@ const DemoModal = ({ isOpen, onClose }) => {
                   <option value="tech">Technologie</option>
                   <option value="other">Autre</option>
                 </select>
+              </div>
+              <div className="form-group">
+                <label>Niveau d'Urgence</label>
+                <div className="alert-buttons-form">
+                  {[
+                    { val: 'FAIBLE', label: 'Vert', class: 'low' },
+                    { val: 'MOYEN', label: 'Orange', class: 'medium' },
+                    { val: 'CRITIQUE', label: 'Rouge', class: 'high' }
+                  ].map((level) => (
+                    <button
+                      key={level.val}
+                      type="button"
+                      className={`alert-btn-form ${level.class} ${urgency === level.val ? 'active' : ''}`}
+                      onClick={() => setUrgency(level.val)}
+                    >
+                      {level.label}
+                    </button>
+                  ))}
+                </div>
+                <input type="hidden" name="urgence" value={urgency} />
               </div>
               <div className="form-group">
                 <label>Message / Besoins spécifiques</label>

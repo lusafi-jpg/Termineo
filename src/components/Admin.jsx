@@ -29,7 +29,7 @@ const Admin = ({ onBack }) => {
   };
 
   const handleGrant = (id) => {
-    const updated = requests.map(req => 
+    const updated = requests.map(req =>
       req.id === id ? { ...req, status: 'Accordée' } : req
     );
     localStorage.setItem('demoRequests', JSON.stringify(updated));
@@ -59,12 +59,12 @@ const Admin = ({ onBack }) => {
           <form onSubmit={handleLogin}>
             <div className="form-group">
               <label>Mot de passe</label>
-              <input 
-                type="password" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Entrez le mot de passe"
-                required 
+                required
               />
             </div>
             {error && <p className="error-text">{error}</p>}
@@ -97,6 +97,7 @@ const Admin = ({ onBack }) => {
               <th>Email</th>
               <th>Entreprise</th>
               <th>Secteur</th>
+              <th>Urgence</th>
               <th>Message</th>
               <th>Statut</th>
               <th>Actions</th>
@@ -105,7 +106,7 @@ const Admin = ({ onBack }) => {
           <tbody>
             {requests.length === 0 ? (
               <tr>
-                <td colSpan="8" className="empty-state">Aucune demande pour le moment.</td>
+                <td colSpan="9" className="empty-state">Aucune demande pour le moment.</td>
               </tr>
             ) : (
               requests.map((req) => (
@@ -115,6 +116,11 @@ const Admin = ({ onBack }) => {
                   <td data-label="Email">{req.email}</td>
                   <td data-label="Entreprise">{req.entreprise}</td>
                   <td data-label="Secteur">{req.secteur}</td>
+                  <td data-label="Urgence">
+                    <span className={`urgency-badge ${req.urgence?.toLowerCase() || 'faible'}`}>
+                      {req.urgence || 'Faible'}
+                    </span>
+                  </td>
                   <td data-label="Message" className="msg-cell" title={req.message}>{req.message || '-'}</td>
                   <td data-label="Statut">
                     <span className={`status-badge ${req.status === 'Accordée' ? 'granted' : 'pending'}`}>
